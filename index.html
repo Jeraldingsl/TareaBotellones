@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Botellones Thomson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #0070f3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container,
+        .records-container,
+        .pdf-container {
+            background-color: #181818;
+            border: 1px solid #282828;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #282828;
+            border-radius: 5px;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        input::placeholder {
+            color: #B3B3B3;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            background-color: #0070f3;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #registrosContainer,
+        #pdfContainer {
+            background-color: #181818;
+            border: 1px solid #282828;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+        #generarPDF {
+            display: block;
+            background-color: #0070f3;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .menus-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .menu-container {
+            background-color: #282828;
+            border: 1px solid #121212;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .menu-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .menu-container button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            background-color: #0070f3;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Botellones Thomson</h1>
+    </header>
+
+    <div class="menus-container">
+        <!-- Menú Principal -->
+        <div class="menu-container">
+            <h2>Menu Principal</h2>
+            <form id="registroForm">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for "hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                <label for="cantidad">Cantidad de Botellas:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+                <label for="zona">Zona:</label>
+                <input type="text" id="zona" name="zona" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+        <!-- Menú de Registros -->
+        <div class="menu-container">
+            <h2>Menu de Registros</h2>
+            <button id="verRegistros">Ver Registros</button>
+        </div>
+    </div>
+
+    <button id="generarPDF">Generar PDF</button>
+
+    <div class="records-container">
+        <h2>Registros</h2>
+        <ul id="registrosList"></ul>
+    </div>
+
+    <div class="pdf-container" id="pdfContainer"></div>
+    <script src="script.js"></script>
+    <script src="ver_registros.js"></script>
+</body>
+
+</html>

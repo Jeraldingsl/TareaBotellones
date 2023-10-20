@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container, .records-container, .pdf-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#registrosContainer, #pdfContainer {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+#generarPDF {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.menu-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    max-width: 200px; /* Ajusta el ancho máximo según tus preferencias */
+}
+
+.menu-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.menu-container button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
